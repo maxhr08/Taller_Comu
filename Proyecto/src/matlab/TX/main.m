@@ -21,6 +21,10 @@ function [] = main(input_message)
     %fprintf(encoded_message_FILE,'%s','EOF');
     
     fclose(encoded_message_FILE);
+    
+    %Execute python script to send data to Arduino
+    system('py ../../python/TallerToSerial.py')
+    
 end
     
     

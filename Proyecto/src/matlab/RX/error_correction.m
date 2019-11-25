@@ -1,7 +1,8 @@
 function [correctedcode]= error_correction(Encoded_Message)
 % Use a [15,11] Hamming code.
+    
+
     m = 4; 
-   
     newH=hammgen(m);
     
     trt = syndtable(newH); % Produce decoding table.
