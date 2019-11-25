@@ -15,8 +15,6 @@ function [] = main(input_message)
     for i=1:size(message_array,1)
         encoded_message = codification(message_array(i,:));
         encoded_message = char(encoded_message+'0');
-        encoded_message = strcat('b''',encoded_message);
-        encoded_message = strcat(encoded_message, '''');
         fprintf(encoded_message_FILE,'%s\n',encoded_message);
     end
     %fprintf(encoded_message_FILE,'%s','EOF');
